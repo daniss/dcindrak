@@ -1,21 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: wil-playground
-  labels:
-    app: main
+  name: iot42danis
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: main
+      app: io42danis
   template:
     metadata:
       labels:
-        app: main
+        app: io42danis
     spec:
       containers:
-      - name: wil-playground-cont
-        image: wil42/playground:v1
+      - name: iot42danis
+        image: danios149/iot42danis:v1
         ports:
-        - containerPort: 8888
+        - containerPort: 8085
